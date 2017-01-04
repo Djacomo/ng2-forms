@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ItemComponent} from '../item';
+import {Component, OnInit} from '@angular/core';
+import {ItemComponent} from '../item';
+import {isSimpleTemplateString} from "codelyzer/util/utils";
 
 @Component({
   selector: 'app-items-list',
@@ -8,12 +9,22 @@ import { ItemComponent} from '../item';
 })
 export class ItemsListComponent implements OnInit {
 
-  itemsList: ItemComponent[];
+  itemsList: ItemComponent[] = [];
+
+  constructor() {
+
+    this.itemsList.push(new ItemComponent());
+    this.itemsList.push(new ItemComponent());
+    this.itemsList.push(new ItemComponent());
+    this.itemsList.push(new ItemComponent());
 
 
-  constructor() { }
+    console.log("Costruttore: ItemsList", this.itemsList);
+
+  }
 
   ngOnInit() {
+    console.log("onInit: ItemsList");
   }
 
 }

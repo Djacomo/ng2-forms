@@ -10,9 +10,14 @@ export class ItemComponent implements OnInit {
   @Input()
   label: string;
 
-  constructor() { }
+  constructor() {
+    console.log("Costruttore: Item");
+  }
 
   ngOnInit() {
+
+    console.log("onInit: Item");
+
   }
 
 }
