@@ -1,7 +1,12 @@
-<div>
+<div class="ui medium">
+
+
+
+  <h1>Lista</h1>
   <ul>
-    <li *ngFor="let asd of itemsList">
-         <app-item></app-item>
+    <li *ngFor="let item of itemsList">
+      <app-item [item]="item"></app-item>
     </li>
+
   </ul>
 </div>
